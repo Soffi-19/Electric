@@ -1,0 +1,255 @@
+/* --- RESET GENERAL --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* --- HEADER --- */
+header {
+    background: white;
+    padding: 30px;
+    text-align: center;
+}
+
+/* ENCABEZADO CON LOGO Y TEXTO (Compatible con index) */
+.encabezado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.logo img {
+    width: 110px;
+    height: auto;
+}
+
+/* TÍTULOS */
+.texto-header {
+    text-align: left;
+}
+
+.titulo-principal {
+    font-size: 60px;
+    color: #4a3a7a;
+    margin: 0;
+}
+
+.subtitulo {
+    font-size: 28px;
+    color: #555;
+    margin: 5px 0;
+}
+
+/* --- NAVBAR UNIFICADA (El secreto del diseño) --- */
+.navbar,
+nav {
+    margin-top: 20px;
+    background-color: #4a3a7a;
+    padding: 15px 0; /* Aumentamos el grosor vertical */
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Soporte para listas (ul) en fundamentos.html */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px; /* Espacio entre links */
+    padding: 0;
+    margin: 0;
+}
+
+/* Estilos para los enlaces (Soporta ambos HTML) */
+.navbar a,
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 15px;
+    transition: all 0.3s ease; /* Para que el cambio de color sea suave */
+}
+
+/* Caso especial para links sueltos en index.html */
+.navbar a {
+    margin: 0 5px;
+}
+
+/* Efecto al pasar el mouse */
+.navbar a:hover,
+nav ul li a:hover {
+    color: #d9c8f0;
+    background-color: rgba(255, 255, 255, 0.1); /* Sutil brillo de fondo */
+    border-radius: 5px;
+}
+
+/* --- CONTENIDO PRINCIPAL --- */
+main {
+    width: 80%;
+    margin: auto;
+    padding: 30px;
+}
+
+/* SECCIONES */
+section {
+    background: white;
+    padding: 25px;
+    margin: 25px 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    color: #4a3a7a;
+    margin-bottom: 15px;
+}
+
+p {
+    margin-bottom: 15px;
+    line-height: 1.7;
+}
+
+ul {
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+/* IMÁGENES */
+.img {
+    width: 100%;
+    max-width: 500px;
+    display: block;
+    margin: 15px auto;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.img:hover {
+    transform: scale(1.02); /* Pequeño zoom al pasar el mouse */
+}
+
+/* --- FOOTER --- */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #4a3a7a;
+    color: white;
+    margin-top: 30px;
+}
+
+.circuit-layout{
+    display:flex;
+    gap:30px;
+    align-items:center;
+    justify-content:space-between;
+    flex-wrap:wrap;
+}
+
+.circuit-box{
+    flex:1;
+    min-width:400px;
+}
+
+.circuit-explanation{
+    flex:1;
+    min-width:300px;
+}
+
+.wire{
+    stroke:#333;
+    stroke-width:6;
+    fill:none;
+    stroke-linecap:round;
+}
+
+.battery{
+    stroke:#333;
+    stroke-width:5;
+}
+
+.battery-text{
+    font-size:22px;
+    fill:#333;
+    font-weight:bold;
+}
+
+.concept-card{
+    margin:20px 0;
+    padding:18px;
+    border-radius:12px;
+    background:#faf7ff;
+    border:1px solid #d8c8ff;
+}
+
+.concept-card h4{
+    color:#4a3a7a;
+    margin-bottom:10px;
+}
+
+.bulb-glow{
+    animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow{
+    from{
+        filter: drop-shadow(0 0 5px #ffd54f);
+    }
+    to{
+        filter: drop-shadow(0 0 18px #ffeb3b);
+    }
+}
+
+.electron-real{
+    fill:#2196f3;
+    offset-path:path("M 80 300 L 80 100 L 250 100 A 35 35 0 1 1 320 100 L 440 100 L 440 300");
+    animation: moveReal 5s linear infinite;
+}
+
+@keyframes moveReal{
+    from{ offset-distance:0%; }
+    to{ offset-distance:100%; }
+}
+
+.electron-conv{
+    fill:#e53935;
+    offset-path:path("M 440 300 L 440 100 L 320 100 A 35 35 0 1 0 250 100 L 80 100 L 80 300");
+    animation: moveConv 5s linear infinite;
+}
+
+@keyframes moveConv{
+    from{ offset-distance:0%; }
+    to{ offset-distance:100%; }
+}
+
+.legend{
+    margin-top:15px;
+    display:flex;
+    gap:20px;
+}
+
+.dot{
+    width:12px;
+    height:12px;
+    border-radius:50%;
+    display:inline-block;
+}
+
+.blue{
+    background:#2196f3;
+}
+
+.red{
+    background:#e53935;
+}
