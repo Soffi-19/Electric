@@ -1,3 +1,4 @@
+
 /* --- RESET GENERAL --- */
 * {
     margin: 0;
@@ -49,49 +50,45 @@ header {
     margin: 5px 0;
 }
 
-/* --- NAVBAR UNIFICADA (El secreto del diseño) --- */
+/* --- NAVBAR UNIFICADA --- */
 .navbar,
 nav {
     margin-top: 20px;
     background-color: #4a3a7a;
-    padding: 15px 0; /* Aumentamos el grosor vertical */
+    padding: 15px 0;
     border-radius: 8px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-/* Soporte para listas (ul) en fundamentos.html */
 nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 25px; /* Espacio entre links */
+    gap: 25px;
     padding: 0;
     margin: 0;
 }
 
-/* Estilos para los enlaces (Soporta ambos HTML) */
 .navbar a,
 nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
     padding: 8px 15px;
-    transition: all 0.3s ease; /* Para que el cambio de color sea suave */
+    transition: all 0.3s ease;
 }
 
-/* Caso especial para links sueltos en index.html */
 .navbar a {
     margin: 0 5px;
 }
 
-/* Efecto al pasar el mouse */
 .navbar a:hover,
 nav ul li a:hover {
     color: #d9c8f0;
-    background-color: rgba(255, 255, 255, 0.1); /* Sutil brillo de fondo */
+    background-color: rgba(255, 255, 255, 0.1);
     border-radius: 5px;
 }
 
@@ -137,7 +134,7 @@ ul {
 }
 
 .img:hover {
-    transform: scale(1.02); /* Pequeño zoom al pasar el mouse */
+    transform: scale(1.02);
 }
 
 /* --- FOOTER --- */
@@ -253,3 +250,52 @@ footer {
 .red{
     background:#e53935;
 }
+
+/* --- LED INTERACTIVO --- */
+
+.control-led{
+    text-align:center;
+    margin-top:20px;
+}
+
+#slider{
+    width:300px;
+    margin:20px 0;
+}
+
+#led-luz{
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    margin:20px auto;
+
+    background: radial-gradient(circle, #ffff66, #ffd000);
+
+    opacity:0.2;
+
+    box-shadow:
+    0 0 10px yellow,
+    0 0 20px orange,
+    0 0 40px gold;
+
+    transition:all 0.3s ease;
+}
+
+/* --- BOTÓN VOLVER ARRIBA --- */
+
+.btn-top{
+    display:inline-block;
+    margin-top:20px;
+    padding:10px 18px;
+    background:#4a3a7a;
+    color:white;
+    text-decoration:none;
+    border-radius:8px;
+    transition:0.3s;
+    font-weight:bold;
+}
+
+.btn-top:hover{
+    background:#6b56a8;
+}
+
